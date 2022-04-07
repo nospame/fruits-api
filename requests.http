@@ -1,7 +1,7 @@
 GET http://localhost:3000/fruits
 
 ###
-GET http://localhost:3000/fruits/1
+GET http://localhost:3000/fruits/5
 
 ###
 POST http://localhost:3000/fruits
@@ -13,3 +13,14 @@ content-type: application/json
   "family": "stonefruit",
   "image_url": "https://images.albertsons-media.com/is/image/ABS/184150300?$ecom-pdp-desktop$&defaultImage=Not_Available&defaultImage=Not_Available"
 }
+
+###
+PATCH http://localhost:3000/fruits/5
+content-type: application/json
+
+{
+  "name": "pineapple"
+}
+
+###
+DELETE http://localhost:3000/fruits/6
