@@ -16,8 +16,11 @@ class FruitsController < ApplicationController
       family: params[:family],
       image_url: params[:image_url]
     )
-    fruit.save
-    render json: fruit.as_json
+    if fruit.save
+      render json: fruit.as_json
+    else
+      render json: {errors: fruit.errors.full_messages}, status: 422
+    end
   end
 
   def update
@@ -26,8 +29,11 @@ class FruitsController < ApplicationController
     fruit.color = params[:color] || fruit.color
     fruit.family = params[:family] || fruit.family
     fruit.image_url = params[:image_url] || fruit.image_url
-    fruit.save
-    render json: fruit.as_json
+    if fruit.save
+      render json: fruit.as_json
+    else
+      render json: {errors: fruit.errors.full_messages}, status: 422
+    end
   end
 
   def destroy

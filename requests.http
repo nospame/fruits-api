@@ -8,7 +8,6 @@ POST http://localhost:3000/fruits
 content-type: application/json
 
 {
-  "name": "mango",
   "color": "orange",
   "family": "stonefruit",
   "image_url": "https://images.albertsons-media.com/is/image/ABS/184150300?$ecom-pdp-desktop$&defaultImage=Not_Available&defaultImage=Not_Available"
